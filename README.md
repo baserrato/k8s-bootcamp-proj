@@ -4,3 +4,4 @@
 ## Contributors
 - Evan Drake
 - Benjamin Serrato
+- Steven Mendez
