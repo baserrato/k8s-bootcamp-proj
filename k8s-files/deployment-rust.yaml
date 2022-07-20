@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rust-deployment
+  namespace: k8demo-namespace
+  labels:
+    app: rust-deploy
+spec:
+  replicas: 1
+  selector: 
+  matchLabels:
+    app: rust-pod
+  template:
+    metadata:
+      labels:
+        app: rust-pod
+    spec:
+      containers:
+        
