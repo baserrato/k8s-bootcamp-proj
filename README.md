@@ -5,6 +5,7 @@
 - Evan Drake
 - Benjamin Serrato
 - Steven Mendez
+- Ryan Hoofard
 
 ## HPA check
 - HPA: kubecatl get hpa [autoscaler name *optional] --watch[foreground watcher]
