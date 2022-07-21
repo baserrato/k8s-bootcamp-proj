@@ -1,0 +1,3 @@
+[submodule "workLog"]
+	path = workLog
+	url = git@github.com:snowmang1/workLog.git
