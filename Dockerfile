@@ -1,10 +1,10 @@
 FROM rust:1.62 as builder
 
-RUN mkdir workLog
+RUN mkdir actix_serv
 
-WORKDIR workLog
+WORKDIR actix_serv
 
-COPY workLog .
+COPY actix_serv .
 
 RUN cargo build --release
 
@@ -12,6 +12,6 @@ FROM debian:buster-slim
 
 RUN mkdir comp
 
-COPY --from=builder /workLog/target/release /usr/local/bin/workLog
+COPY --from=builder /actix_serv/target/release /usr/local/bin/actix_serv
 
-ENTRYPOINT ["workLog"]
+ENTRYPOINT ["actix_serv"]
