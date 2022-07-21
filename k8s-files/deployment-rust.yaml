@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: rust
-          image: rust-demo:latest
+          image: rust_con:latest
           imagePullPolicy: IfNotPresent
           ports: 
             - containerPort: 8080
