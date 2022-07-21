@@ -4,14 +4,12 @@ RUN mkdir actix_serv
 
 WORKDIR actix_serv
 
-COPY actix_serv .
+COPY actix_serv/ .
 
-RUN cargo build --release
+RUN cargo build
 
 FROM debian:buster-slim
 
-RUN mkdir comp
+COPY --from=builder /actix_serv/target/debug/ /usr/local/bin/
 
-COPY --from=builder /actix_serv/target/release /usr/local/bin/actix_serv
-
-ENTRYPOINT ["actix_serv"]
+CMD ["actix_serv"]
