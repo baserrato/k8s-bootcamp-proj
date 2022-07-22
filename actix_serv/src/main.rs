@@ -2,6 +2,7 @@ use actix_web::{get, App, HttpServer, Responder};
 use rand;
 
 fn matrix(m1: Vec<Vec<u64>>, m2: Vec<Vec<u64>>) -> u64 {
+    println!("I am log");
     let mut m3: Vec<Vec<u64>> = m1.clone();
     for n in 0..m1.len() {
         for i in 0..m1[n].len() {

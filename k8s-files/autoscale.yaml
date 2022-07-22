@@ -7,7 +7,7 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: jenkins-deployment
+    name: rust-deployment
   minReplicas: 1 
   maxReplicas: 5
   metrics:

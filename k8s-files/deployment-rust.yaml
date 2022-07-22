@@ -18,6 +18,11 @@ spec:
       containers:
         - name: rust
           image: rust_con:latest
+          resources: 
+            limits:
+              cpu: 500m
+            requests:
+              cpu: 10m
           imagePullPolicy: IfNotPresent
           ports: 
             - containerPort: 8080
