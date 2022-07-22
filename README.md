@@ -38,6 +38,8 @@
 	- ```kubectl port-forward grafana-6648db4b8b-cr5xx 3000:3000 -n monitoring```
 	- alias for this in .bashrc
 - grapha needs to be initialzed with prometheus at start
+	- import dashboard 1860
+	- select prometheus from the drop down near the bottom
 
 
 ## Test
