@@ -1,19 +1,22 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: test-autoscaler
-  namespace: k8demo-namespace
+  name: rust-autoscaler
+  namespace: scale-namespace
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: jenkins-deployment
+    name: rust-deployment
   minReplicas: 1 
   maxReplicas: 5
+  behavior: 
+    scaleDown:
+      stabilizationWindowSeconds: 10
   metrics:
   - type: Resource
     resource:
       name: cpu
       target:
         type: Utilization
-        averageUtilization: 10
+        averageUtilization: 80
