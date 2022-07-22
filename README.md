@@ -32,6 +32,13 @@
 	- `bash .namespace.sh namespace scale-namespace`
 - make sure you can curl and get an output
 	- `curl localhost:8080`
+- run create script in each metrics sub directory
+	- alias for this in .bashrc
+- portforward grafana
+	- ```kubectl port-forward grafana-6648db4b8b-cr5xx 3000:3000 -n monitoring```
+	- alias for this in .bashrc
+- grapha needs to be initialzed with prometheus at start
+
 
 ## Test
 - test with hey tool
