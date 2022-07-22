@@ -19,3 +19,6 @@ alias metrics="kubectl port-forward grafana-6648db4b8b-cr5xx 3000:3000 -n monito
 
 ## testing
 alias heytest="hey -n 1000000 -z 1m http://127.0.0.1:8080"
+
+## help
+alias lochelp="cat .bashrc | grep ^alias"
