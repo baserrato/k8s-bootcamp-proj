@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  mame: rust-service
+  name: rust-service
   namespace: scale-namespace
 spec:
   type: NodePort
